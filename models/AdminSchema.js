@@ -7,7 +7,6 @@ const AdminSchema = new mongoose.Schema({
   role: {
     type: String,
   },
-
 });
 
-export default mongoose.model("Admin", AdminSchema);
+export default mongoose.model("Admin", AdminSchema, "admin");

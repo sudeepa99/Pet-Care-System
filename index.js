@@ -1,12 +1,3 @@
-console.log("🚀 ===== APPLICATION STARTING =====");
-console.log("⭐ Process ID:", process.pid);
-console.log("⭐ Node.js version:", process.version);
-console.log("⭐ NODE_ENV:", process.env.NODE_ENV);
-console.log("⭐ PORT:", process.env.PORT);
-console.log("⭐ Current directory:", process.cwd());
-console.log("⭐ File list:", require("fs").readdirSync("."));
-console.log("🚀 ===== STARTING EXPRESS SERVER =====");
-
 import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -74,12 +65,6 @@ app.use("/api/v1/pets", petRoutes);
 app.use("/api/v1/users", userRoutes);
 
 app.use(errorHandler);
-
-// Start the server
-// app.listen(port, async () => {
-//   await connectDB();
-//   console.log(`Server is running on port ${port}`);
-// });
 
 // Connect DB before starting server**
 const startServer = async () => {
